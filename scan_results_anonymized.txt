@@ -1,0 +1,33 @@
+# Nmap scan (anonymized) - sample output
+Nmap scan report for [Router]
+Host is up.
+Not shown: many closed ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for [Workstation]
+Host is up.
+Not shown: many closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for [Mobile]
+Host is up.
+All scanned TCP ports are closed
+
+Nmap scan report for [IoT Device]
+Host is up.
+Not shown: many closed ports
+PORT   STATE SERVICE
+1900/tcp open upnp
+
+# Notes:
+# - Router exposes web admin and DNS.
+# - Workstation has RPC and file-sharing services; consider firewalling unnecessary ports.
+# - Mobile appears closed to TCP probes.
+# - IoT Device responds on UPnP (1900); recommend disabling UPnP if not needed.
